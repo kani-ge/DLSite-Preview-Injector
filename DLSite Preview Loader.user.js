@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        DLSite Preview Injector
+// @name        DLSite Preview Loader
 // @namespace   loli_be_free
 // @match       *://www.dlsite.com/*
 // @grant       none
@@ -88,9 +88,9 @@ async function insertImages (errorBox, type, code, group) {
   const message = errorBox.querySelector('.title_text').textContent;
   var restrict_message;
   if (message.includes('現在販売されていません'))
-    restrict_message = 'Work not available for sale';
+    restrict_message = 'Not available for sale';
   else if (message.includes('お住いの国'))
-    restrict_message = 'Work not avalible in your country or region';
+    restrict_message = 'Not avalible in your country or region';
   else
     restrict_message = 'Unknown reason';
 
